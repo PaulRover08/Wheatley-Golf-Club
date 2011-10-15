@@ -1,0 +1,99 @@
+/* CSS */
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+html, body {
+	background-color: #ffffff;
+	margin: 0px;
+	padding: 0px;
+}
+
+html, body, p, td {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	line-height: 1.6em;
+    margin-bottom: 10px;
+}
+
+#main_wrapper {
+	width: 980px;
+	margin: 0px auto;
+	padding: 0px;
+}
+
+/* HEADER */
+
+#header_wrapper {
+	width: 980px;
+	height: 100px;
+	margin: 0px;
+	padding: 0px;
+}
+
+/* CONTENT */
+
+#content_wrapper {
+	position: relative;
+	width: 980px;
+	margin: 0px;
+	padding: 0px;
+}
+
+#content_left {
+    float: left;
+    width: 200px;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    background-color: #545454;
+}
+
+#content_right {
+    float: left;
+    width: 780px;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    background-color: #636363;
+}
+
+/* FOOTER */
+
+#footer_wrapper {
+	clear: both;
+    width: 980px;
+	padding: 0px;
+	margin: 0px;
+    background-color: #979797;
+}
+
+/*CONTACT FORM STYLES*/
+
+.form_desc {
+	float: left;
+	width: 80px;
+	line-height: 15px;
+	padding-bottom: 6px;
+	margin-left: 0px;
+	font-family: Arial, Helvetica, sans-serif; font-size: 12px;}
+.form_field {
+	padding-bottom: 6px;
+	clear: both;
+}
+.form_content {
+	width: 170px;
+	border: 1px solid #999;
+}
+.form_base {
+	padding-left: 80px;
+	padding-top: 10px;
+	padding-bottom:3px;
+	font-family: Verdana, Geneva, sans-serif; font-size: 10px; line-height: 1.2em
+}
+
+.form_base input {
+	margin-top: 4px;
+	padding-top: 0px;
+}
