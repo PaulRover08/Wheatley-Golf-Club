@@ -1,6 +1,6 @@
 <?php
 $hostname = "localhost";
-$username = "thekeyfund";
-$password = "w5JfMPEK";
-$database = "thekeyfund";
+$username = "wheatleygolf";
+$password = "y21S5n2z";
+$database = "wheatleygolf";
 ?>
