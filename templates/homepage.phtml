@@ -36,6 +36,14 @@
 </style>
 
 <div id="backgrounds">
+    <?php foreach($this->headers as $header): ?>
+    <div style="background: url(/images/header/<?=$header['picture']?>) top left no-repeat;">
+        <div class="captionWrapper">
+            <p class="caption"><?=$header['caption']?></p>
+        </div>
+    </div>    
+    <?php endforeach; ?>
+<!--
     <div class="background_1">
         <div class="captionWrapper">
             <p class="caption">a rewarding test of SKILLS</p>
@@ -46,21 +54,13 @@
             <p class="caption">finish your round in STYLE</p>
         </div>
     </div>
+-->
 </div>
 <div id="header">
     <div id="sliderControls"><img src="/images/previous.png" alt="previous" width="28" height="27" id="previousSlideshow" /><img src="/images/pause.png" alt="Pause" width="28" height="27" id="pauseSlideshow" /><img src="/images/next.png" alt="next" width="28" height="27" id="nextSlideshow" /></div>
 </div>
 
 <div id="main_wrapper">
-    <div id="header_images">
-    	<?php $i = 1; foreach($this->header_images as $image): ?>
-    	<?php if($image['url']): ?><a href="<?=$image['url']?>" target="_blank"><?php endif; ?>
-        <div class="imagewrapper<?=($i == count($this->header_images)) ? ' last' : ''?>"><img width="176" height="176" src="/images/header-images/<?=$image['image']?>" alt="" />
-        </div>
-        <?php if($image['url']): ?></a><?php endif; ?>
-        <?php $i++; endforeach; ?>
-    </div>
-
     <div id="page">
         <div id="nav_wrapper">
         	<div id="topnav">

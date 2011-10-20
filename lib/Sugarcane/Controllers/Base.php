@@ -88,7 +88,7 @@ class Sugarcane_Controllers_Base extends Zend_Controller_Action
         
         $navType = $this->config->settings->nav;
         
-                // lets get the nav built up and sent to the view if were not in the admin panel
+        // lets get the nav built up and sent to the view if were not in the admin panel
         if($this->view->controller != 'pagebuilder') {
             $currentpage = $this->req->getParam('currentpage', 'index');
             $useStrpos   = false;
@@ -125,7 +125,7 @@ class Sugarcane_Controllers_Base extends Zend_Controller_Action
         }
         
         // we want the editable header images on every page, so here goes
-        $this->view->header_images = $this->dbMapper->getHeaderImages();
+        $this->view->headers = $this->dbMapper->getPageHeaders();
         
         // Site-wide editable regions
         $this->view->sidebarEditableRegion     = $this->dbMapper->getEditableRegionBySlug('sidebar');

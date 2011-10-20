@@ -30,7 +30,7 @@ a:hover {
 h1 { font-size: 20px; margin: 0px 0px 5px 4px; color: #aa966e; }
 h2 { font-size: 14px; margin: 0px 0px 5px 4px; color: #aa966e; }
 
-p { line-height: 1.6em; margin: 0px 0px 5px 4px;}
+p { line-height: 1.6em; margin: 0px 0px 5px 0;}
 
 #header {
 	position: relative;
