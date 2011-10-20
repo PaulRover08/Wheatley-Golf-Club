@@ -19,13 +19,15 @@
         <div id="header">
             <!-- <img src="url(/images/weblynx.jpg" alt="weblynx" width="169" height="52" /> -->
             <a target="_blank" href="http://www.sugarcaneweb.co.uk"><img src="/images/SUGARCANE_WEB_ADMIN_LOGO.png" alt="sugarcane_web" /></a>
-            <ul id="nav">
-                <li><a href="/admin/">CMS Home</a></li>
-                <li><a href="/admin/users.php">Users</a></li>
-                <li><a href="/pagebuilder/">Content</a></li>
-                <li><a href="/admin/news/">News</a></li>
-                <li><a href="/admin/login.php?do=logout">Logout</a></li>
-            </ul>
+            <?php if(!$this->hideNav): ?>
+                <ul id="nav">
+                    <li><a href="/admin/">CMS Home</a></li>
+                    <li><a href="/admin/users.php">Users</a></li>
+                    <li><a href="/admin/pagebuilder/">Content</a></li>
+                    <li><a href="/admin/news/">News</a></li>
+                    <li><a href="/admin/login.php?do=logout">Logout</a></li>
+                </ul>
+            <?php endif; ?>
         </div>
         
         <div id="content">
