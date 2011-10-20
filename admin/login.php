@@ -1,4 +1,7 @@
 <?php
+header("Location: /admin/index/");
+exit;
+
 require_once('connection/weblynx.php');
 require_once('includes/DB.php');
 
