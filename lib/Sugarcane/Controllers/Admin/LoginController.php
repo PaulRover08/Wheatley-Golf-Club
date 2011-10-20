@@ -26,7 +26,7 @@ class Admin_LoginController extends Sugarcane_Controllers_Base
         if($user) {
             $_SESSION['user']     = $user;
             $_SESSION['loggedin'] = true;
-            header('Location: /admin/');
+            header('Location: /admin/index/');
             exit;
         } else {
             $_SESSION['loginfail'] = 'Login failed, username or password incorrect';
