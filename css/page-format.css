@@ -58,6 +58,7 @@ html, body, p, td {
     color: #000000;
     font-size: 30px;
     -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
     font-family: Georgia;
     padding: 0 10px;
     float: left;
@@ -69,6 +70,7 @@ html, body, p, td {
     padding: 8px 10px;
     float: left;
     -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
 }
 #sliderControls img {
     cursor: pointer;
