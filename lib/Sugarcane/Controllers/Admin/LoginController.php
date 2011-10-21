@@ -33,4 +33,11 @@ class Admin_LoginController extends Sugarcane_Controllers_Base
             header('Location: /admin/login/');
         }
     }
+    
+    public function logoutAction()
+    {
+        session_destroy();
+        header('Location: /admin/login');
+        exit;
+    }
 }

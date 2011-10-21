@@ -26,15 +26,6 @@
 </head>
 
 <body>
-<style type="text/css">
-.background_1 {
-    background: url(/images/header/first.jpg);
-}
-.background_2 {
-    background: url(/images/header/second.jpg);
-}
-</style>
-
 <div id="backgrounds">
     <?php foreach($this->headers as $header): ?>
     <div style="background: url(/images/header/<?=$header['picture']?>) top left no-repeat;">
@@ -43,18 +34,6 @@
         </div>
     </div>    
     <?php endforeach; ?>
-<!--
-    <div class="background_1">
-        <div class="captionWrapper">
-            <p class="caption">a rewarding test of SKILLS</p>
-        </div>
-    </div>
-    <div class="background_2">
-        <div class="captionWrapper">
-            <p class="caption">finish your round in STYLE</p>
-        </div>
-    </div>
--->
 </div>
 <div id="header">
     <div id="sliderControls"><img src="/images/previous.png" alt="previous" width="28" height="27" id="previousSlideshow" /><img src="/images/pause.png" alt="Pause" width="28" height="27" id="pauseSlideshow" /><img src="/images/next.png" alt="next" width="28" height="27" id="nextSlideshow" /></div>
