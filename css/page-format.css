@@ -6,7 +6,7 @@
 }
 
 html, body {
-	background-color: #253f26;
+	background: #253f26 url('../images/BODY_BG.jpg') no-repeat top center;
 	margin: 0px;
 	padding: 0px;
 }
@@ -20,6 +20,41 @@ html, body, p, td {
 }
 
 #main_wrapper {
+	padding: 0px;
+	position: relative;
+	z-index: 102;
+}
+
+#header_top_wrapper {
+	padding: 0px;
+	position: relative;
+	z-index: 101;
+	margin-top: -503px;
+	height: 503px;
+}
+
+#members_bar {
+	margin: 0px auto;
+	height: 47px;
+	width: 980px;
+	padding: 3px 0px 0px 0px;
+}
+
+#logo_bar {
+	height: 123px;
+	width: 100%;
+	background: url('../images/HEADER_BAR.png') no-repeat top center;
+}
+
+#header_page {
+    width: 980px;
+    margin: 0px auto;
+    padding: 0px;
+}
+
+#logo {
+	position: relative;
+	margin: 0px;
 	padding: 0px;
 }
 
@@ -35,7 +70,7 @@ html, body, p, td {
 	padding: 0px;
 	height: 503px;
     position: relative;
-    z-index: 999;
+    z-index: 100;
 }
 #backgrounds div {
     width: 100%;

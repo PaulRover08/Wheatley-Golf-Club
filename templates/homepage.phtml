@@ -39,16 +39,31 @@
     <div id="sliderControls"><img src="/images/previous.png" alt="previous" width="28" height="27" id="previousSlideshow" /><img src="/images/pause.png" alt="Pause" width="28" height="27" id="pauseSlideshow" /><img src="/images/next.png" alt="next" width="28" height="27" id="nextSlideshow" /></div>
 </div>
 
+<div id="header_top_wrapper">
+	<div id="members_bar">
+		<h4 style="float: left; margin: 6px 10px 0px 635px;"><a href="/">Members Area</a></h4>
+		<a href="/"><img style="float: left; margin: 5px 8px 0px 0px;" src="/images/HOME_FACEBOOK.png" alt="facebook" /></a>
+		<a href="/"><img style="float: left; margin: 5px 0px 0px 0px;" src="/images/HOME_TWITTER.png" alt="twitter" /></a>
+		<div id="clear"></div>
+	</div>
+	<div id="logo_bar">
+		<div id="header_page">
+			<div id="logo">
+				<h1 style="font-size:50px; margin-bottom: 0px;"><a style="color: #fff; text-decoration: none;" href="/">wheatley golf Club</a></h1>
+			</div>
+			<div id="nav_wrapper">
+        		<div id="topnav">
+            		<ul id="mainnav">
+                		<?=$this->nav?>
+            		</ul>
+            	</div>
+        	</div>
+		</div>
+	</div>
+</div>
+
 <div id="main_wrapper">
-    <div id="page">
-        <div id="nav_wrapper">
-        	<div id="topnav">
-            	<ul id="mainnav">
-                	<?=$this->nav?>
-            	</ul>
-            </div>
-        </div>
-        
+    <div id="page">        
         <div id="content_wrapper">
         	<div id="text_wrapper">
         		<?=$this->page_title ? '<h1>' . $this->page_title . '</h1>' : '';?>

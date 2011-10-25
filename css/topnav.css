@@ -1,8 +1,9 @@
 #nav_wrapper {
     position: relative;
 	width: 980px;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 12px;
+	font-family: Georgia, Arial, Helvetica, sans-serif;
+	text-transform: lowercase;
+	font-size: 16px;
 	padding: 0px;
 	margin: 0px;
 	height: 30px;
@@ -14,7 +15,6 @@
 	list-style: none;
 	margin: 0px;
 	padding: 0px 0px 0px 0px;
-    background-color: #4d4d4d;
 }
 ul#mainnav li {
     height: 30px;
@@ -34,16 +34,18 @@ ul#mainnav a {
 }
 
 ul#mainnav li:hover {
-	color: #000;
+	color: #fff;
+	text-decoration: underline;
 }
 ul#mainnav li:hover a {
-	color: #000;
+	color: #fff;
+	text-decoration: underline;
 }
 
 ul#mainnav li.current {
-	color: #000;
+	color: #fff;
 }
 
 ul#mainnav li.current a {
-	color: #000;
+	color: #fff;
 }

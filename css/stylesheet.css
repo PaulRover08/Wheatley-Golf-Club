@@ -36,15 +36,15 @@ img {
 a {outline: none;}
 a img {outline: none; border:0;}
 
-h1 {font-family: Arial, Helvetica, sans-serif; font-size: 28px; color: #b19f79; font-weight: normal; margin-bottom: 8px; line-height: 1.6em; }
-h2 {font-family: Arial, Helvetica, sans-serif; font-size: 22px; color: #b19f79; font-weight: normal; margin-bottom: 8px; line-height: 1.6em;}
-h3{font-family: Arial, Helvetica, sans-serif; font-size: 16px ; color: #b19f79; font-weight: normal; margin-bottom: 8px; line-height: 1.6em;}
-h4 {font-family: Arial, Helvetica, sans-serif; font-size: 14px ; color: #b19f79; font-weight: normal; margin-bottom: 8px; line-height: 1.6em; }
-h5 {font-family: Arial, Helvetica, sans-serif; font-size: 12px ; color: #b19f79; font-weight: bold; margin-bottom: 8px; line-height: 1.6em; }
-a:link {color: #40423d; font-weight: normal; text-decoration: none;}
-a:visited {color: #40423d; text-decoration: none;}
-a:hover {color: #40423d; text-decoration: underline;}
-a:active {color: #40423d; text-decoration: none;}
+h1 {font-family: Georgia, Arial, Helvetica, sans-serif; font-size: 34px; color: #122f13; font-weight: normal; margin-bottom: 8px; line-height: 1.6em; }
+h2 {font-family: Georgia, Arial, Helvetica, sans-serif; font-size: 28px; color: #122f13; font-weight: normal; margin-bottom: 8px; line-height: 1.6em;}
+h3{font-family: Georgia, Arial, Helvetica, sans-serif; font-size: 22px ; color: #122f13; font-weight: normal; margin-bottom: 8px; line-height: 1.6em;}
+h4 {font-family: Georgia, Arial, Helvetica, sans-serif; font-size: 18px ; color: #122f13; font-weight: normal; margin-bottom: 8px; line-height: 1.6em; }
+h5 {font-family: Georgia, Arial, Helvetica, sans-serif; font-size: 14px ; color: #122f13; font-weight: bold; margin-bottom: 8px; line-height: 1.6em; }
+a:link {color: #122f13; font-weight: normal; text-decoration: none;}
+a:visited {color: #122f13; text-decoration: none;}
+a:hover {color: #122f13; text-decoration: underline;}
+a:active {color: #122f13; text-decoration: none;}
 .right {float: right;}
 .left {float: left;}
 

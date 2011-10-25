@@ -15,8 +15,8 @@ $(document).ready(function() {
     
     $('#backgrounds').cycle({
 		fx: 'fade', // choose your transition type, ex: fade, scrollUp, shuffle, etc…
-		timeout:  5000,
-		speed: 2000,
+		timeout:  3000,
+		speed: 3000,
 		containerResize: 0,
 		slideResize: 0
 	});
