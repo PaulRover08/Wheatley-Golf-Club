@@ -29,13 +29,44 @@ html, body, p, td {
 }
 
 /* HEADER */
-#header {
-    width: 980px;
-	margin: 0 auto;
+#headerWrapper {
 	padding: 0px;
 	height: 503px;
     position: relative;
     z-index: 999;
+}
+#detailsNavWrapper {
+    overflow: hidden;
+    background: url(/images/header_green_bar.png);
+    padding: 14px 0;
+}
+#header {
+    width: 980px;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+}
+#detailsNav, #social {
+    width: 960px;
+	margin: 0 auto;
+}
+#social {
+    text-align: right;
+    padding: 8px 0;
+}
+#headerPhone {
+    float: right;
+    color: #ffffff;
+    font-size: 18px;
+    font-family: Georgia;
+    margin-right: 50px;
+}
+#detailsNav h1 {
+    font-size: 50px;
+    line-height: 60px;
+    font-family: Georgia;
+    color: #ffffff;
+    margin-bottom: 20px;
 }
 #backgrounds div {
     width: 100%;
@@ -65,7 +96,7 @@ html, body, p, td {
 }
 
 #sliderControls {
-    margin-top: 440px;
+    margin-top: 255px;
     background: #122f13;
     padding: 8px 10px;
     float: left;
@@ -77,6 +108,12 @@ html, body, p, td {
 }
 #pauseSlideshow {
     margin: 0 10px;
+}
+
+#logo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
 
 /* CONTENT */
