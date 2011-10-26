@@ -1,3 +1,26 @@
+#mainnav {
+    list-style: none;
+}
+
+#mainnav li {
+	float: left;
+	padding-right: 11px;
+	margin-right: 11px;
+	border-right: 1px solid #ffffff;
+	line-height: 18px;
+}
+
+#mainnav li.last {
+	border-right: none;
+}
+
+#mainnav a {
+    font-size: 18px;
+    font-family: Georgia;
+    color: #ffffff;
+}
+
+/*
 #nav_wrapper {
     position: relative;
 	width: 980px;
@@ -32,20 +55,4 @@ ul#mainnav a {
 	text-decoration: none;
 	font-weight: normal;
 }
-
-ul#mainnav li:hover {
-	color: #fff;
-	text-decoration: underline;
-}
-ul#mainnav li:hover a {
-	color: #fff;
-	text-decoration: underline;
-}
-
-ul#mainnav li.current {
-	color: #fff;
-}
-
-ul#mainnav li.current a {
-	color: #fff;
-}
+*/
