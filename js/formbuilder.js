@@ -14,7 +14,7 @@ $(document).ready(function() {
     $('#addOption button').click(function() {
         var option = $('input[name="option"]').val();
         
-        $('#optionList').append('<li>'+option+' <span class="removeOption">x</span></li>');
+        $('#optionList').append('<li><input type="hidden" name="options[]" value="'+option+'" />'+option+' <span class="removeOption">x</span></li>');
     });
     
 });

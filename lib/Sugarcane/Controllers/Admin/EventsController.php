@@ -144,4 +144,35 @@ class Admin_EventsController extends Sugarcane_Controllers_Base
         $this->view->contentView = '/admin/events/editfield.phtml';
         $this->renderView('admin.phtml');
     }
+    
+    public function savefieldAction()
+    {
+        // Lets save the field to the database
+        $save['event_field_id']  = $this->req->getParam('event_field_id');
+        $save['label']           = $this->req->getParam('label');
+        $fieldType               = $this->req->getParam('field_type');
+        $save['field_type']      = $fieldType;
+        $save['label_position']  = $this->req->getParam('label_position');
+        
+        $required = $this->req->getParam('required');
+        $save['required'] = ($required == true) ? 'Y' : 'N';
+        
+        $summary_display = $this->req->getParam('summary_display');
+        $save['summary_display'] = ($summary_display == true) ? 'Y' : 'N';
+        
+        $display_label = $this->req->getParam('display_label');
+        $save['display_label'] = ($display_label == true) ? 'Y' : 'N';
+        
+        if($fieldType == 'dropdown') {
+            $options = $this->req->getParam('options');
+            
+            $save['extra_details'] = implode('::', $options);
+        }
+        
+        if($this->dbMapper->saveRecord($save, 'event_fields', 'event_field_id')) {
+            $this->_redirect('/admin/events/manageform');
+        } else {
+            throw new Exception('Failed to save event field');
+        }
+    }
 }

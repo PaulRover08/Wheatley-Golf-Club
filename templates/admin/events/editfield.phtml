@@ -1,6 +1,6 @@
 <h1><?=(isset($this->field_id)) ? 'Edit' : 'Add' ?> Field</h1>
 
-<form method="post" action="/admin/events/saveform">
+<form method="post" action="/admin/events/savefield">
     <ul class="form">
         <input type="hidden" name="event_field_id" value="<?=$this->field_id ? $this->field_id : ''?>" />
         <li>
@@ -19,7 +19,10 @@
             <ul id="optionList">
                 <?php if(isset($this->extra_details)): ?>
                     <?php foreach($this->extra_details as $detail): ?>
-                    <li><?=$detail?> <span class="removeOption">x</span></li>
+                    <li>
+                        <input type="hidden" name="options[]" value="<?=$detail?>" />
+                        <?=$detail?> <span class="removeOption">x</span>
+                    </li>
                     <?php endforeach; ?>
                 <?php endif; ?>
             </ul>
