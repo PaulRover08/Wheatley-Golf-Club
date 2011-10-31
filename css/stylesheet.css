@@ -36,7 +36,7 @@ img {
 a {outline: none;}
 a img {outline: none; border:0;}
 
-h1 {font-family: Georgia, Arial, Helvetica, sans-serif; font-size: 34px; color: #122f13; font-weight: normal; margin-bottom: 8px; line-height: 1.6em; }
+h1 {font-family: Georgia, Arial, Helvetica, sans-serif; font-size: 34px; color: #122f13; font-weight: normal; margin-bottom: 8px; line-height: 1.0em; }
 h2 {font-family: Georgia, Arial, Helvetica, sans-serif; font-size: 28px; color: #122f13; font-weight: normal; margin-bottom: 8px; line-height: 1.6em;}
 h3{font-family: Georgia, Arial, Helvetica, sans-serif; font-size: 22px ; color: #122f13; font-weight: normal; margin-bottom: 8px; line-height: 1.6em;}
 h4 {font-family: Georgia, Arial, Helvetica, sans-serif; font-size: 18px ; color: #122f13; font-weight: normal; margin-bottom: 8px; line-height: 1.6em; }
