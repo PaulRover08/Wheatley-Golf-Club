@@ -63,6 +63,22 @@ $blogPostCommentRoute = new Zend_Controller_Router_Route(
 );
 $router->addRoute('blogCommentRoute', $blogPostCommentRoute);
 
+$eventIdRoute = new Zend_Controller_Router_Route(
+    '/admin/events/event/:event_id',
+    array('controller'  => 'events',
+          'action'      => 'event',
+          'module'      => 'admin')
+);
+$router->addRoute('eventIdRoute', $eventIdRoute);
+
+$eventFieldIdRoute = new Zend_Controller_Router_Route(
+    '/admin/events/editfield/:event_field_id',
+    array('controller'  => 'events',
+          'action'      => 'editfield',
+          'module'      => 'admin')
+);
+$router->addRoute('eventFieldIdRoute', $eventFieldIdRoute);
+
 $blogArchiveRoute = new Zend_Controller_Router_Route(
     '/blog/archive',
     array('controller'  => 'blog',

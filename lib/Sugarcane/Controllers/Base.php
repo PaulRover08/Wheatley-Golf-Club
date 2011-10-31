@@ -127,6 +127,13 @@ class Sugarcane_Controllers_Base extends Zend_Controller_Action
         $this->view->sidebarEditableRegion     = $this->dbMapper->getEditableRegionBySlug('sidebar');
         $this->view->footerLogosEditableRegion = $this->dbMapper->getEditableRegionBySlug('footerlogos');
         $this->view->footerEditableRegion      = $this->dbMapper->getEditableRegionBySlug('footer');
+        
+        // the next 3 events should appear on the left hand side
+        $events = $this->dbMapper->getEvents();
+        foreach($events as $index=>$event) {
+            $events[$index]['additionalFields'] = $this->dbMapper->getExtraEventDetails($event['event_id']);
+        }
+        $this->view->nextThreeEvents = $events;
 	}
     
 		/**

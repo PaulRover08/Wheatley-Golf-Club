@@ -151,3 +151,32 @@ p { line-height: 1.6em; margin: 0px 0px 5px 0;}
     width: 380px;
     padding-right: 20px;
 }
+
+/* Tooltips */
+a.newtooltip {
+    position: relative; /*this is the key*/
+    z-index: 24;
+    color: #000;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+a.newtooltip:hover {
+    z-index: 25;
+}
+
+a.newtooltip span {
+    display: none;
+}
+
+a.newtooltip:hover span { /*the span will display just on :hover state*/
+    display: block;
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    border: 1px solid #AA966E;
+    background-color: #ffffff;
+    padding: 2px;
+    color: #000;
+    text-align: center;
+}

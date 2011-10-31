@@ -56,6 +56,7 @@ html, body, p, td {
 	position: relative;
 	margin: 0px;
 	padding: 0px;
+display: block;
 }
 
 #page {
@@ -69,6 +70,7 @@ html, body, p, td {
 	height: 503px;
     position: relative;
     z-index: 100;
+    overflow: hidden;
 }
 #detailsNavWrapper {
     overflow: hidden;
@@ -80,6 +82,7 @@ html, body, p, td {
 	margin: 0 auto;
 	position: relative;
 	overflow: hidden;
+	padding-bottom: 24px;
 }
 #detailsNav, #social {
     width: 960px;
@@ -125,6 +128,8 @@ html, body, p, td {
     font-size: 30px;
     -moz-border-radius: 20px;
     -webkit-border-radius: 20px;
+	border-radius: 20px;
+	behavior: url(/lib/PIE.htc);
     font-family: Georgia;
     padding: 0 10px;
     float: left;
@@ -137,6 +142,8 @@ html, body, p, td {
     float: left;
     -moz-border-radius: 20px;
     -webkit-border-radius: 20px;
+	border-radius: 20px;
+	behavior: url(/lib/PIE.htc);
 }
 #sliderControls img {
     cursor: pointer;
@@ -149,6 +156,25 @@ html, body, p, td {
     position: absolute;
     right: 0;
     bottom: 0;
+}
+
+/* EVENTS */
+#events {
+    width: 300px;
+    -moz-border-radius: 20px;
+	border-radius: 20px;
+	behavior: url(/lib/PIE.htc);
+    border: 1px solid #ffffff;
+    padding: 10px 15px;
+    color: #ffffff;
+}
+div.event {
+    margin-bottom: 20px;
+}
+#events h1 {
+    font-size: 24px;
+    color: #ffffff;
+    line-height: 27px;
 }
 
 /* CONTENT */

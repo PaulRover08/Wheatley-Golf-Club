@@ -55,6 +55,19 @@
 <div id="main_wrapper">
     <div id="page">
         <div id="content_wrapper">
+            <div id="left">
+                <div id="events">
+                    <h1>upcoming diary events...</h1>
+                    <?php foreach($this->nextThreeEvents as $event): ?>
+                    <div class="event">
+                        <?=date('l jS F Y', strtotime($event['eventdate']))?><br />
+                        <strong><?=strtoupper($event['title'])?> - <?=strtoupper($event['additionalFields']['players'])?> - <?=strtoupper($event['additionalFields']['matchtype'])?></strong><br />
+                        <?=$event['additionalFields']['organiser']?> - First Tee - <?=$event['additionalFields']['firsttee']?>
+                    </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        
         	<div id="text_wrapper">
         		<?=$this->page_title ? '<h1>' . $this->page_title . '</h1>' : '';?>
         			<?php
