@@ -102,7 +102,7 @@ $(document).ready(function() {
                
         $.ajax({
             type: 'POST',
-            url: '/pagebuilder/savepageorder/',
+            url: '/admin/pagebuilder/savepageorder/',
             data: {'pagedata':updateOrder},
             success: function(){
                 if(refreshpage) {
@@ -174,17 +174,17 @@ $(document).ready(function() {
     });
     
     $('#savepagebutton').click(function() {
-        $('#createpageform').attr('action','/pagebuilder/savepage/');
+        $('#createpageform').attr('action','/admin/pagebuilder/savepage/');
         $('#createpageform').attr('target','_self');
     });
     
     $('#previewbutton').click(function() {
-        $('#createpageform').attr('action','/pagebuilder/previewpage/');
+        $('#createpageform').attr('action','/admin/pagebuilder/previewpage/');
         $('#createpageform').attr('target','_blank');
     });
     
     $('#cancelchanges').click(function() {
-        window.location = '/pagebuilder/';
+        window.location = '/admin/pagebuilder/';
     });
     
     $('.closewindow').click(function() {

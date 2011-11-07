@@ -19,7 +19,7 @@ class ErrorController extends Sugarcane_Controllers_Base
                 $this->view->errorMessage = '<p><strong>This might be because:</strong><br />
                                              You have typed the web address incorrectly, or<br />
                                              the page you were looking for may have been moved, updated or deleted.</p>
-                                             <p><a href="/">Return to the Key Fund homepage</a></p>';
+                                             <p><a href="/">Return to the wheatley golf club homepage</a></p>';
                 //$this->view->errorMessage = $errors->exception->getMessage();
                 
                 // Log only broken links, not users who can't type

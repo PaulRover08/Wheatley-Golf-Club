@@ -57,14 +57,32 @@
         <div id="contentLeft">
             <div id="events">
                 <h1>upcoming diary events...</h1>
-                <?php foreach($this->nextThreeEvents as $event): ?>
-                <div class="event">
+                <?php $i=1; foreach($this->nextThreeEvents as $event): ?>
+                <div class="event<?=($i == 3) ? ' last' : ''?>">
                     <?=date('l jS F Y', strtotime($event['eventdate']))?><br />
                     <strong><?=strtoupper($event['title'])?> - <?=strtoupper($event['additionalFields']['players'])?> - <?=strtoupper($event['additionalFields']['matchtype'])?></strong><br />
                     <?=$event['additionalFields']['organiser']?> - First Tee - <?=$event['additionalFields']['firsttee']?>
                 </div>
-                <?php endforeach; ?>
+                <?php $i++; endforeach; ?>
             </div>
+            <p class="viewall_link"><a href="/events">view all events</a></p>
+            <div id="news">
+            	<h1>latest club news...</h1>
+                <div id="news_items">
+                	<?php if(count($this->newsitems)): ?>
+                    	<?php $i=1; foreach($this->newsitems as $newsitem): ?>
+                    	<div class="newsitem<?=($i == count($this->newsitems)) ? ' last' : ''?>">
+                            <p><?=date('jS F Y', strtotime($newsitem['newsdate']))?></p>
+                            <p class="newstitle"><?=$newsitem['title']?></p>
+                            <p><?=$newsitem['preview']?> <a href="/news/view/article/<?=$newsitem['news_id']?>">more...</a></p>
+                        </div>
+                        <?php $i++; endforeach; ?>
+                    <?php else: ?>
+                        <p>No news items found</p>
+                    <?php endif; ?>
+            	</div>
+            </div>
+            <p class="viewall_link"><a href="/news">view all news</a></p>
         </div>
             
         <div id="contentRight">
@@ -82,45 +100,9 @@
         	</div>
     	</div>
         
-        <div id="latest_news">
-        	<h2>latest news</h2>
-            <div id="news_items">
-            	<?php if(count($this->newsitems)): ?>
-                           
-                	<?php foreach($this->newsitems as $newsitem): ?>
-                    <p style="display: none;"><?=date('jS F Y', strtotime($newsitem['newsdate']))?></p>
-                    <h4 style="margin-bottom: 3px;"><?=$newsitem['title']?></h4>
-                    <p style="margin-bottom: 0px;"><?=$newsitem['preview']?></p>
-                    <h5 style="margin-top: -5px;"><a href="/news/view/article/<?=$newsitem['news_id']?>">read full article here...</a></h5>
-                    <?php endforeach; ?>
-                            
-                <?php else: ?>
-                    <p>No news items found</p>
-                <?php endif; ?>
-        	</div>
-        </div>
-        
-        <div id="blog_home">
-        	<h1>latest from our blog...</h1>
-        	<?php if(count($this->blogposts)): ?>
-        		<?php foreach($this->blogposts as $blogposts): ?>
-        	<div id="blogListImage">
-        		<a href="/blog/view/<?=$blogposts['post_id']?>"><img style="margin-bottom: 10px;" src="/images/blogimages/<?=$blogposts['post_image']?>" width="210" alt="<?=$blogposts['post_title']?>" /></a>
-        	</div>
-        	<div id="blogListContent">
-        		<h4><a href="/blog/view/<?=$blogposts['post_id']?>"><?=$blogposts['post_title']?></a></h4>
-        		<p><?=$blogposts['post_summary']?></p>
-        		<h5><a href="/blog/view/<?=$blogposts['post_id']?>">read full article here...</a></h5>
-        	</div>
-        	<div id="clear"></div>
-        	<?php endforeach; ?>
-        	<?php else: ?>
-                <p>No blog posts found</p>
-            <?php endif; ?>
-        </div><!-- end id="blog_home" -->
-        
-        <div id="footer_wrapper">
-        	Footer
+        <div id="footer">
+        	<p>This is the footer where useful information will go</p>
+            <p>Website produced by <a href="http://www.sugarcaneweb.co.uk" target="_blank">www.sugarcaneweb.co.uk</a></p>
         </div>
     </div>
 </div>

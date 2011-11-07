@@ -72,7 +72,7 @@ class Admin_PagebuilderController extends Sugarcane_Controllers_Base {
             $save_page['ordering'] = isset($lastpage['ordering']) ? $lastpage['ordering']+1 : 1;
             
             if($this->dbMapper->saveRecord($save_page, 'pages', 'page_id')) {
-                $this->_redirect('/pagebuilder/');
+                $this->_redirect('/admin/pagebuilder/');
             } else {
                 throw new Exception('Failed to add link');
             }
@@ -122,7 +122,7 @@ class Admin_PagebuilderController extends Sugarcane_Controllers_Base {
         }
                 
         if($this->dbMapper->saveRecord($save_page, 'pages', 'page_id')) {
-            $this->_redirect('/pagebuilder/');
+            $this->_redirect('/admin/pagebuilder/');
         } else {
             throw new Exception('Failed to save page');
         }
@@ -133,7 +133,7 @@ class Admin_PagebuilderController extends Sugarcane_Controllers_Base {
         $publish_page['published'] = 1;
         
         if($this->dbMapper->saveRecord($publish_page, 'pages', 'page_id')) {
-            $this->_redirect('/pagebuilder/');
+            $this->_redirect('/admin/pagebuilder/');
         } else {
             throw new Exception('Failed to publish page');
         }
@@ -144,7 +144,7 @@ class Admin_PagebuilderController extends Sugarcane_Controllers_Base {
         $disable_page['published'] = 0;
         
         if($this->dbMapper->saveRecord($disable_page, 'pages', 'page_id')) {
-            $this->_redirect('/pagebuilder/');
+            $this->_redirect('/admin/pagebuilder/');
         } else {
             throw new Exception('Failed to disable page');
         }
@@ -156,7 +156,7 @@ class Admin_PagebuilderController extends Sugarcane_Controllers_Base {
         if($page_id > 1) {
             if($this->dbMapper->deleteRecord('pages', 'page_id', $page_id)) {
                 $this->dbMapper->deleteChildren('pages', 'parent', $page_id);
-                $this->_redirect('/pagebuilder/');
+                $this->_redirect('/admin/pagebuilder/');
             } else {
                 throw new Exception('Failed to delete page, please go back and try again.');
             }
@@ -245,7 +245,7 @@ class Admin_PagebuilderController extends Sugarcane_Controllers_Base {
         $save['meta_description'] = htmlentities($this->req->getParam('meta_description'));
         
         if($this->dbMapper->saveRecord($save, 'metadata', 'meta_id')) {
-            $this->_redirect('/pagebuilder/');
+            $this->_redirect('/admin/pagebuilder/');
         } else {
             throw new Exception('Failed to save tags, please go back and try again');
         }
@@ -349,7 +349,7 @@ class Admin_PagebuilderController extends Sugarcane_Controllers_Base {
         }
         
         if($this->dbMapper->saveRecord($saveCaption, 'cms_settings', 'setting_id') && $picSaved) {
-            $this->_redirect('/pagebuilder/');
+            $this->_redirect('/admin/pagebuilder/');
         } else {
             throw new Exception('Failed to save default header, please go back and try again');
         }

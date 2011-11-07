@@ -43,13 +43,8 @@ class IndexController extends Sugarcane_Controllers_Base {
         }
         
         // Start of custom function calls set by permalink
-        if($currentpage == 'index') {
-            $latestposts = $this->getLatestBlogPosts(2);
-            $this->view->latestposts = $latestposts;
-            
-            $newsitems = $this->getLatestNewsItems(2);
-            $this->view->newsitems = $newsitems;
-        }
+        $newsitems = $this->getLatestNewsItems(2);
+        $this->view->newsitems = $newsitems;
         // End of custom function calls set by permalink
         
         $this->view->css[] = '/css/index.css';

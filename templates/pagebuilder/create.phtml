@@ -1,6 +1,6 @@
 <h1><?=$this->page_id ? 'Edit' : 'Create'?> Page</h1>
 
-<form method="post" action="/pagebuilder/savepage/" id="createpageform">
+<form method="post" action="/admin/pagebuilder/savepage/" id="createpageform">
     <input type="hidden" name="page_id" value="<?=($this->page_id) ? $this->page_id : ''?>" />
     <input type="hidden" name="parent" value="<?=$this->parent?>" />
     <ul class="form">

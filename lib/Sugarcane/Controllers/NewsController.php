@@ -11,8 +11,8 @@ class NewsController extends Sugarcane_Controllers_Base {
     
     public function preDispatch() {
         $this->view->currentpage = 'news';
-        $this->view->page_title = 'News';
-        $this->view->metaTitle = 'Key Fund - News';
+        $this->view->page_title = 'news';
+        $this->view->metaTitle = 'Wheatley Golf Club ~ News';
         $this->view->css[] = '/css/news.css';
     }
     

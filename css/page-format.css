@@ -169,12 +169,16 @@ display: block;
 	border-radius-bottomleft: 20px;
 	border-radius-bottomright: 20px;
 	behavior: url(/lib/PIE.htc);
+	overflow: hidden;
 }
 
 /* LEFT CONTENT */
 #contentLeft {
     float: left;
     margin: 16px 10px 0 10px;
+}
+#contentLeft p {
+    color: #ffffff;
 }
 
 /* RIGHT CONTENT */
@@ -183,10 +187,11 @@ display: block;
     margin-left: 323px;
     margin-right: 10px;
     padding-top: 34px;
+    margin-bottom: 20px;
 }
 
-/* EVENTS */
-#events {
+/* EVENTS & NEWS */
+#events, #news {
     width: 270px;
     -moz-border-radius: 20px;
 	border-radius: 20px;
@@ -194,35 +199,91 @@ display: block;
     border: 1px solid #ffffff;
     padding: 10px 15px;
     color: #ffffff;
+    margin-bottom: 10px;
 }
-div.event {
-    margin-bottom: 20px;
+div.event, div.newsitem {
+    margin-bottom: 18px;
 }
-#events h1 {
+#events div.last, #news div.last {
+    margin-bottom: 0;
+}
+#events h1, #news h1 {
     font-size: 24px;
     color: #ffffff;
     line-height: 27px;
 }
+#news p {
+    margin-bottom: 0;
+}
+.newstitle {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#news a {
+    color: #ffffff;
+    text-transform: uppercase;
+}
+.viewall_link {
+    text-align: right;
+    margin-right: 15px;
+}
+.viewall_link a, .viewall_link a:hover {
+    color: #ffffff;
+}
+
+/* HOMEPAGE CONTENT PANEL */
+#contentPanel {
+    width: 197px;
+    height: 69px;
+    padding-top: 150px;
+    padding-left: 20px;
+    background: url(/images/weather_check.jpg) top left no-repeat;
+    float: right;
+    margin-left: 20px;
+}
+#contentPanel p {
+    margin-bottom: 5px;
+}
+#contentPanel span {
+    margin-left: 5px;
+}
+#contentPanel a {
+    font-size: 18px;
+    font-family: Georgia;
+    color: #122f13;
+}
 
 /* FOOTER */
 
-#footer_wrapper {
+#footer {
 	clear: both;
-    width: 980px;
-	padding: 0px;
-	margin: 0px;
-    background-color: #979797;
+    background-color: #cdcdcd;
+    border-radius: 20px;
+    -moz-border-radius: 20px;
+    behavior: url(/lib/PIE.htc);
+    padding: 16px 16px 10px 16px;
+    margin-bottom: 20px;
+}
+#footer p {
+    color: #6b6b6b;
+    margin-bottom: 5px;
+}
+#footer a {
+    color: #6b6b6b;
 }
 
 /*CONTACT FORM STYLES*/
-
+#contact_form {
+    float: left;
+}
 .form_desc {
 	float: left;
 	width: 80px;
 	line-height: 15px;
 	padding-bottom: 6px;
 	margin-left: 0px;
-	font-family: Arial, Helvetica, sans-serif; font-size: 12px;}
+	font-family: Arial, Helvetica, sans-serif; font-size: 12px;
+}
 .form_field {
 	padding-bottom: 6px;
 	clear: both;
@@ -241,4 +302,20 @@ div.event {
 .form_base input {
 	margin-top: 4px;
 	padding-top: 0px;
+}
+.required {
+    color: #bfbfbf;
+}
+#enquiry {
+    height: 100px;
+    width: 320px;
+}
+
+#errors {
+    border: 1px solid #008F3D;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+#errors ul {
+    list-style: none;
 }
