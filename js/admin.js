@@ -1,4 +1,9 @@
 $(document).ready(function() {
+    
+    /* turns <input class="datefield" type="text" /> into a jQuery UI date select field */
+    if(typeof datepicker == 'function') {
+        $('.datefield').datepicker({ dateFormat: 'dd/mm/yy' });
+    }
 
     $('#addHeader').click(function() {
         var header = $('.headerWrapper:first').clone();

@@ -28,10 +28,12 @@
             </ul>
             <span id="addOption"><input type="text" name="option" /> <button type="button">Add</button></span>
         </li>
+<!--
         <li>
-            <label class="desc">Reqiured</label>
+            <label class="desc">Required</label>
             <input type="checkbox" name="required" value="true" <?=(Globals::ifsetor($this->field['required'], 'N') == 'Y') ? 'checked="checked"' : ''?> />
         </li>
+-->
         <li>
             <label class="desc">Display in summary</label>
             <input type="checkbox" name="summary_display" value="true" <?=(Globals::ifsetor($this->field['summary_display'], 'N') == 'Y') ? 'checked="checked"' : ''?> />

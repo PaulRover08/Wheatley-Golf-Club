@@ -17,4 +17,8 @@ $(document).ready(function() {
         $('#optionList').append('<li><input type="hidden" name="options[]" value="'+option+'" />'+option+' <span class="removeOption">x</span></li>');
     });
     
+    $('.removeOption').live("click", function() {
+        $(this).parent().remove();
+    });
+    
 });

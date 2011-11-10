@@ -36,7 +36,7 @@
     <?php endforeach; ?>
 </div>
 <div id="headerWrapper">
-    <div id="social">Members Login <img src="/images/facebook_round.png" alt="Facebook" width="32" height="32" /> <img src="/images/twitter_round.png" alt="twitter" width="32" height="32" /></div>
+    <div id="social"><span>Members Login</span><img src="/images/facebook_round.png" alt="Facebook" width="32" height="32" /> <img src="/images/twitter_round.png" alt="twitter" width="32" height="32" /></div>
     <div id="detailsNavWrapper">
         <div id="detailsNav">
             <p id="headerPhone">tel: 01302 831655<br />tel: 01302 834085 (Pro)</p>
@@ -97,6 +97,16 @@
                     echo $this->content;
                 endif;
             	?>
+            	
+            	<div id="meetteam">
+                    <h2><img src="/images/meetteam.png" alt="meet the team" width="169" height="165" />meet the team</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer feugiat metus et nibh scelerisque porttitor. Etiam eros leo, porta a tincidunt quis, ullamcorper nec quam.</p>
+                    <ul id="peoplelist">
+                        <?php foreach($this->team as $member): ?>
+                        <li><strong><?=$member['position']?></strong> - <?=$member['first_name']?> <?=$member['surname']?></li>
+                        <?php endforeach; ?>
+                    </ul>
+            	</div>
         	</div>
     	</div>
         

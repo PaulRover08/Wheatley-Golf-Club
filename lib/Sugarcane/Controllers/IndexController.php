@@ -45,6 +45,9 @@ class IndexController extends Sugarcane_Controllers_Base {
         // Start of custom function calls set by permalink
         $newsitems = $this->getLatestNewsItems(2);
         $this->view->newsitems = $newsitems;
+        
+        $team = $this->dbMapper->getTeamMembers();
+        $this->view->team = $team;
         // End of custom function calls set by permalink
         
         $this->view->css[] = '/css/index.css';

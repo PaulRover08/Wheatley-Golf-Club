@@ -68,6 +68,10 @@ class Admin_EventsController extends Sugarcane_Controllers_Base
         $form = new Sugarcane_FormBuilder_Form($eventfields, $event['additionalFields']);
         $this->view->formHtml = $form->renderForm();
         
+        // Pull in jQuery UI
+        $this->view->js[]  = '/js/jquery-ui-1.8.12.custom.min.js';
+        $this->view->css[] = '/css/redmond/jquery-ui-1.8.12.custom.css';
+        
         // Render the whole page
         $this->view->contentView = '/admin/events/event.phtml';
         $this->renderView('admin.phtml');
@@ -78,10 +82,13 @@ class Admin_EventsController extends Sugarcane_Controllers_Base
         // Lets save the first set of fields
         $save['event_id']    = $this->req->getParam('event_id');
         $save['title']       = $this->req->getParam('title');
-        $save['eventdate']   = $this->req->getParam('eventdate');
         $save['summary']     = $this->req->getParam('summary');
         $save['description'] = $this->req->getParam('description');
         $save['published']   = $this->req->getParam('published');
+        
+        // Turn the jQuery UI date into a MySQL date
+        $eventdate = $this->req->getParam('eventdate');
+        $save['eventdate'] = Globals::dateUkToMysql($eventdate);
         
         $event_id = $this->dbMapper->saveRecord($save, 'events', 'event_id');
         
@@ -170,6 +177,13 @@ class Admin_EventsController extends Sugarcane_Controllers_Base
         }
         
         if($this->dbMapper->saveRecord($save, 'event_fields', 'event_field_id')) {
+            $fieldName = $this->req->getParam('event_field_id');
+            if(empty($fieldName)) {
+                $update['fieldname']      = 'field_' . $this->dbMapper->lastInsertId();
+                $update['event_field_id'] = $this->dbMapper->lastInsertId();
+                $this->dbMapper->saveRecord($update, 'event_fields', 'event_field_id');
+            }
+            
             $this->_redirect('/admin/events/manageform');
         } else {
             throw new Exception('Failed to save event field');

@@ -9,7 +9,7 @@
         </li>
         <li>
             <label class="desc">Event date</label>
-            <input type="text" name="eventdate" id="eventdate" value="<?=date('d/m/Y', strtotime(Globals::ifsetor($this->event['eventdate'], 'today')))?>" />
+            <input type="text" name="eventdate" class="datefield" id="eventdate" value="<?=date('d/m/Y', strtotime(Globals::ifsetor($this->event['eventdate'], 'today')))?>" />
         </li>
         <li>
             <label class="desc">Event summary</label>
@@ -22,7 +22,7 @@
         <?=$this->formHtml;?>
         <li>
             <label class="desc">Published</label>
-            <?php $published = Globals::ifsetor($this->event, 'published', '0'); ?>
+            <?php $published = Globals::ifsetor($this->event['published'], '0');?>
             <label><input type="radio" name="published" value="1" <?=$published == '1' ? 'checked="checked"' : ''?> /> Yes</label> <label><input type="radio" name="published" value="0" <?=$published == '0' ? 'checked="checked"' : ''?> /> No</label>
         </li>
         <li id="submitarea">
